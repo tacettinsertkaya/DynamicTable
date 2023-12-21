@@ -1,0 +1,19 @@
+<table [items]="products">
+  <ng-template #header>
+    <tr>
+      <th *ngFor="let col of displayedColumns">
+        {{ col }}
+      </th>
+    </tr>
+  </ng-template>
+  <ng-template #body product let-product>
+    <tr>
+      <td>{{ product.name }}</td>
+      <td>{{ product.priceA }}</td>
+      <td>{{ product.priceB }}</td>
+      <td>{{ product.priceC }}</td>
+    </tr>
+  </ng-template>
+</table>
+
+<router-outlet></router-outlet>

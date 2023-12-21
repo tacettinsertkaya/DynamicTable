@@ -1,0 +1,8 @@
+<thead>
+  <ng-container *ngTemplateOutlet="headerTemplate"></ng-container>
+</thead>
+<tbody *ngFor="let item of items">
+  <ng-container
+    *ngTemplateOutlet="bodyTemplate; context: { $implicit: item }"
+  ></ng-container>
+</tbody>
